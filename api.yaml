@@ -109,7 +109,7 @@ paths:
                     mensagem: Campo obrigatório não informado
         "403":
           description: |
-            Forbiden
+            Forbidden
           content:
             application/json:
               schema:
