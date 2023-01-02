@@ -5,7 +5,7 @@ Olá, e obrigado por aceitar realizar o desafio técnico do nosso processo selet
 
 O desafio consiste na implementação da API descrita em api.yaml. Todas as informações necessárias sobre a construção da API estão contidas nesse arquivo.
 
-É esperado que o projeto compile sem erros e que quaisquer instruções que sejam necessárias para preparar o ambiente e testar o projeto sejam fornecidas pelo desenvolvedor.
+É esperado que o projeto compile sem erros e que quaisquer instruções necessárias para preparar o ambiente e testar o projeto sejam fornecidas pelo desenvolvedor.
 
 ## Q&A
 ### Qual framework/linguagem devo utilizar?
