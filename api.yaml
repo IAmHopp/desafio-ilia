@@ -134,7 +134,7 @@ paths:
               examples:
                 Horário já registrado:
                   value:
-                    mensagem: Horários já registrado
+                    mensagem: Horário já registrado
   /v1/alocacoes:
     post:
       summary: "Alocar horas trabalhadas"
