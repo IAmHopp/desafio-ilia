@@ -4,19 +4,6 @@ info:
   version: "1.0"
 components:
   schemas:
-    Alocacao:
-      type: object
-      description: Alocação
-      properties:
-        dia:
-          type: string
-          format: date
-        tempo:
-          type: string
-          example: PT2H30M0S
-        nomeProjeto:
-          type: string
-          example: ACME Corporation
     Mensagem:
       type: object
       properties:
@@ -62,18 +49,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Registro'
-
-        alocacoes:
-          type: array
-          items:
-            type: object
-            properties:
-              nomeProjeto:
-                type: string
-                example: ACME Corporation
-              tempo:
-                type: string
-                example: PT69H35M5S
 paths:
   /v1/batidas:
     post:
@@ -135,35 +110,6 @@ paths:
                 Horário já registrado:
                   value:
                     mensagem: Horários já registrado
-  /v1/alocacoes:
-    post:
-      summary: "Alocar horas trabalhadas"
-      description: "Alocar horas trabalhadas, de um dia de trabalho, em um projeto"
-      operationId: "insereAlocacao"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Alocacao"
-      responses:
-        "201":
-          description: |
-            Horas alocadas ao projeto
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Alocacao"
-        "400":
-          description: |
-            Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Mensagem"
-              examples:
-                alocar tempo maior que o tempo trabalhado no dia:
-                  value:
-                    mensagem: Não pode alocar tempo maior que o tempo trabalhado no dia
   /v1/folhas-de-ponto/{mes}:
     get:
       summary: "Relatório mensal"
