@@ -109,7 +109,7 @@ paths:
               examples:
                 Horário já registrado:
                   value:
-                    mensagem: Horários já registrado
+                    mensagem: Horário já registrado
   /v1/folhas-de-ponto/{mes}:
     get:
       summary: "Relatório mensal"
