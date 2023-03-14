@@ -52,6 +52,8 @@ components:
 paths:
   /v1/batidas:
     post:
+      tags: 
+        - "Batidas"
       summary: "Bater ponto"
       description: "Registrar um horário da jornada diária de trabalho"
       operationId: "insereBatida"
@@ -112,6 +114,8 @@ paths:
                     mensagem: Horário já registrado
   /v1/folhas-de-ponto/{mes}:
     get:
+      tags:
+        - Folhas de Ponto
       summary: "Relatório mensal"
       description: "Geração de relatório mensal de usuário."
       operationId: "geraRelatorioMensal"
