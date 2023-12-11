@@ -33,7 +33,7 @@ components:
       type: object
       description: Relatório mensal
       properties:
-        mes:
+        anoMes:
           format: ISO 8601.Duration
           type: string
           example: 2018-08
@@ -106,14 +106,14 @@ paths:
                 Horário já registrado:
                   value:
                     mensagem: Horário já registrado
-  /v1/folhas-de-ponto/{mes}:
+  /v1/folhas-de-ponto/{anoMes}:
     get:
       tags:
         - Folhas de Ponto
       summary: "Relatório mensal"
       description: "Geração de relatório mensal de usuário."
       parameters:
-        - name: mes
+        - name: anoMes
           in: path
           required: true
           schema:
